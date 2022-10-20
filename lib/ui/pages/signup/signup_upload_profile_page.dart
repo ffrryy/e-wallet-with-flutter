@@ -93,13 +93,16 @@ class SignUpSetProfilePage extends StatelessWidget {
                 // NOTE: PIN Input
                 const CustomFormField(
                   title: 'Set PIN (6 digit number)',
+                  obscureText: true,
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 CustomFilleddButton(
                   title: 'Continue',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/sign-up-set-ktp');
+                  },
                 ),
               ],
             ),

@@ -105,7 +105,10 @@ class _OnBordingPageState extends State<OnBordingPage> {
                           children: [
                             CustomFilleddButton(
                               title: 'Get Started',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, '/home', (route) => false);
+                              },
                             ),
                             const SizedBox(
                               height: 20,

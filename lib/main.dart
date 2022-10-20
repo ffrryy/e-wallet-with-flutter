@@ -1,6 +1,9 @@
+import 'package:app_bank/ui/pages/home/home_page.dart';
 import 'package:app_bank/ui/pages/onbording/onbording_page.dart';
 import 'package:app_bank/ui/pages/signin/signin_page.dart';
 import 'package:app_bank/ui/pages/signup/signup_page.dart';
+import 'package:app_bank/ui/pages/signup/signup_set_ktp_page.dart';
+import 'package:app_bank/ui/pages/signup/signup_success_page.dart';
 import 'package:app_bank/ui/pages/signup/signup_upload_profile_page.dart';
 import 'package:app_bank/ui/pages/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +25,9 @@ class MyApp extends StatelessWidget {
         '/sign-in': (context) => const SignInPage(),
         '/sign-up': (context) => const SignUpPage(),
         '/sign-up-set-profile': (context) => const SignUpSetProfilePage(),
+        '/sign-up-set-ktp': (context) => const SignUpSetKtpPage(),
+        '/sign-up-seccess': (context) => const SignUpSuccessPage(),
+        '/home': (context) => const HomePage(),
       },
     );
   }
