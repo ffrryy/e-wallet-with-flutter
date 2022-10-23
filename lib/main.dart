@@ -1,5 +1,11 @@
+import 'package:app_bank/shared/theme.dart';
 import 'package:app_bank/ui/pages/home/home_page.dart';
 import 'package:app_bank/ui/pages/onbording/onbording_page.dart';
+import 'package:app_bank/ui/pages/pin/edit_pin_page.dart';
+import 'package:app_bank/ui/pages/pin/pin.dart';
+import 'package:app_bank/ui/pages/profile/edit_profile_page.dart';
+import 'package:app_bank/ui/pages/profile/profile_page.dart';
+import 'package:app_bank/ui/pages/profile/profile_success_page.dart';
 import 'package:app_bank/ui/pages/signin/signin_page.dart';
 import 'package:app_bank/ui/pages/signup/signup_page.dart';
 import 'package:app_bank/ui/pages/signup/signup_set_ktp_page.dart';
@@ -19,6 +25,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: lightbackgroundColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: lightbackgroundColor,
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: IconThemeData(
+            color: blackColor,
+          ),
+          titleTextStyle: blackTextStyle.copyWith(
+            fontSize: 20,
+            fontWeight: semiBold,
+          ),
+        ),
+      ),
       routes: {
         '/': (context) => const SplashPage(),
         '/onBording': (context) => const OnBordingPage(),
@@ -28,6 +49,11 @@ class MyApp extends StatelessWidget {
         '/sign-up-set-ktp': (context) => const SignUpSetKtpPage(),
         '/sign-up-seccess': (context) => const SignUpSuccessPage(),
         '/home': (context) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
+        '/pin': (context) => const PinPage(),
+        '/edit-profile': (context) => const EditProfilePage(),
+        '/edit-pin': (context) => const EditPinPage(),
+        '/profile-success': (context) => const ProfileSuccessPage(),
       },
     );
   }

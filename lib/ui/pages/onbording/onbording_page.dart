@@ -29,7 +29,6 @@ class _OnBordingPageState extends State<OnBordingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightbackgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

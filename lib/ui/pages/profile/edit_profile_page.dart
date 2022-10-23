@@ -3,41 +3,22 @@ import 'package:app_bank/ui/widgets/buttons.dart';
 import 'package:app_bank/ui/widgets/form.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class EditProfilePage extends StatelessWidget {
+  const EditProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 24,
+      appBar: AppBar(
+        title: const Text(
+          'Edit Profile',
         ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         children: [
-          Container(
-            width: 155,
-            height: 50,
-            margin: const EdgeInsets.only(
-              top: 100,
-              bottom: 100,
-            ),
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  'assets/images/img_logo_light.png',
-                ),
-              ),
-            ),
-          ),
-          Text(
-            'Join Us to Unlock\nYour Growth',
-            style: blackTextStyle.copyWith(
-              fontSize: 20,
-              fontWeight: semiBold,
-            ),
-          ),
           const SizedBox(
-            height: 30,
+            height: 40,
           ),
           Container(
             padding: const EdgeInsets.all(
@@ -50,21 +31,24 @@ class SignUpPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // NOTE: Name Input
+                const CustomFormField(
+                  title: 'Username',
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
                 const CustomFormField(
                   title: 'Full Name',
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                // NOTE: Email Input
                 const CustomFormField(
                   title: 'Email Address',
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                // NOTE: Password Input
                 const CustomFormField(
                   title: 'Password',
                   obscureText: true,
@@ -73,23 +57,14 @@ class SignUpPage extends StatelessWidget {
                   height: 30,
                 ),
                 CustomFilleddButton(
-                  title: 'Continue',
+                  title: 'Update Now',
                   onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up-set-profile');
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/profile-success', (route) => false);
                   },
                 ),
               ],
             ),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          CustomTextButton(
-            title: 'Sign In',
-            width: 165,
-            onPressed: () {
-              Navigator.pushNamed(context, '/sign-in');
-            },
           ),
         ],
       ),
