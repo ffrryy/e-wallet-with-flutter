@@ -3,14 +3,14 @@ import 'package:app_bank/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class TopUpAmountPage extends StatefulWidget {
-  const TopUpAmountPage({super.key});
+class TransferAmountPage extends StatefulWidget {
+  const TransferAmountPage({super.key});
 
   @override
-  State<TopUpAmountPage> createState() => _TopUpAmountPageState();
+  State<TransferAmountPage> createState() => _TopUpAmountPageState();
 }
 
-class _TopUpAmountPageState extends State<TopUpAmountPage> {
+class _TopUpAmountPageState extends State<TransferAmountPage> {
   final TextEditingController amountController =
       TextEditingController(text: '0');
 
@@ -209,11 +209,11 @@ class _TopUpAmountPageState extends State<TopUpAmountPage> {
             height: 50,
           ),
           CustomFilleddButton(
-            title: 'Checkout Now',
+            title: 'Continue',
             onPressed: () async {
               if (await Navigator.pushNamed(context, '/pin') == true) {
                 Navigator.pushNamedAndRemoveUntil(
-                    context, '/top-up-success', (route) => false);
+                    context, '/transfer-success', (route) => false);
               }
             },
           ),
