@@ -315,7 +315,12 @@ class HomePage extends StatelessWidget {
               HomeServiceItem(
                 title: 'More',
                 iconUrl: 'assets/icons/ic_more.png',
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => const MoreDialog(),
+                  );
+                },
               ),
             ],
           ),
@@ -429,6 +434,83 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class MoreDialog extends StatelessWidget {
+  const MoreDialog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: Colors.transparent,
+      insetPadding: EdgeInsets.zero,
+      alignment: Alignment.bottomCenter,
+      content: Container(
+        height: 326,
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(30),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: lightbackgroundColor,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Do More With Us',
+              style: blackTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            const SizedBox(
+              height: 13,
+            ),
+            Center(
+              child: Wrap(
+                spacing: 29,
+                runSpacing: 29,
+                children: [
+                  HomeServiceItem(
+                    title: 'Data',
+                    iconUrl: 'assets/icons/ic_data.png',
+                    onTap: () {
+                      Navigator.pushNamed(context, '/data-provider');
+                    },
+                  ),
+                  HomeServiceItem(
+                    title: 'Water',
+                    iconUrl: 'assets/icons/ic_water.png',
+                    onTap: () {},
+                  ),
+                  HomeServiceItem(
+                    title: 'Stream',
+                    iconUrl: 'assets/icons/ic_stream.png',
+                    onTap: () {},
+                  ),
+                  HomeServiceItem(
+                    title: 'Movie',
+                    iconUrl: 'assets/icons/ic_movie.png',
+                    onTap: () {},
+                  ),
+                  HomeServiceItem(
+                    title: 'Food',
+                    iconUrl: 'assets/icons/ic_food.png',
+                    onTap: () {},
+                  ),
+                  HomeServiceItem(
+                    title: 'Travel',
+                    iconUrl: 'assets/icons/ic_travel.png',
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

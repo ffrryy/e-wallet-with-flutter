@@ -1,4 +1,7 @@
 import 'package:app_bank/shared/theme.dart';
+import 'package:app_bank/ui/pages/dataprovider/data_package_page.dart';
+import 'package:app_bank/ui/pages/dataprovider/data_provider_page.dart';
+import 'package:app_bank/ui/pages/dataprovider/data_provider_success.dart';
 import 'package:app_bank/ui/pages/home/home_page.dart';
 import 'package:app_bank/ui/pages/onbording/onbording_page.dart';
 import 'package:app_bank/ui/pages/pin/edit_pin_page.dart';
@@ -66,6 +69,9 @@ class MyApp extends StatelessWidget {
         '/transfer': (context) => const TransferPage(),
         '/transfer-amount': (context) => const TransferAmountPage(),
         '/transfer-success': (context) => const TransferSuccessPage(),
+        '/data-provider': (context) => const DataProviderPage(),
+        '/data-package': (context) => const DataPackagePage(),
+        '/data-success': (context) => const DataProviderSuccess(),
       },
     );
   }

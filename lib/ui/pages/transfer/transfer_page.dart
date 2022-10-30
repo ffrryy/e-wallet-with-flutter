@@ -38,16 +38,20 @@ class TransferPage extends StatelessWidget {
           ),
           //  buildRecentUsers(),
           buildResult(),
-          const SizedBox(
-            height: 274,
-          ),
-          CustomFilleddButton(
-            title: 'Continue',
-            onPressed: () {
-              Navigator.pushNamed(context, '/transfer-amount');
-            },
-          ),
         ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 24,
+        ),
+        child: CustomFilleddButton(
+          title: 'Continue',
+          onPressed: () {
+            Navigator.pushNamed(context, '/transfer-amount');
+          },
+        ),
       ),
     );
   }
