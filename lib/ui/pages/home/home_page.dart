@@ -1,3 +1,4 @@
+import 'package:app_bank/shared/shared_methods.dart';
 import 'package:app_bank/shared/theme.dart';
 import 'package:app_bank/ui/widgets/home_latest_transactions_item.dart';
 import 'package:app_bank/ui/widgets/home_send_again_item.dart';
@@ -202,7 +203,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Text(
-            'Rp 12.500',
+            formatCurrency(50000),
             style: whiteTextStyle.copyWith(
               fontSize: 24,
               fontWeight: semiBold,
@@ -247,7 +248,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                'of Rp 20.000',
+                'of ${formatCurrency(22000)}',
                 style: blackTextStyle.copyWith(
                   fontSize: 14,
                   fontWeight: semiBold,
