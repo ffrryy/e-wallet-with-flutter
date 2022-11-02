@@ -32,9 +32,12 @@ dependencies:
   another_flushbar: ^1.12.29
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.1
   google_fonts: ^3.0.1
+  http: ^0.13.5
   intl: ^0.17.0
   url_launcher: ^6.1.6
 
