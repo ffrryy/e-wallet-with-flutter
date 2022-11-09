@@ -15,7 +15,7 @@ class SingUpFormModel {
     this.ktp,
   });
 
-  Map<String, dynamic> tiJson() {
+  Map<String, dynamic> toJson() {
     return {
       'name': name,
       'email': email,
